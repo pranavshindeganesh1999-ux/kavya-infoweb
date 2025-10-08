@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Home - Kavya Infoweb</title>
+    <link rel="stylesheet" href="assets/css/Applynow.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="./assets/img/logo/Fevicon.png " rel="icon">
+    <link href="assets/img/logo/Logo_English.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/UI-UXstyle.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <div class="frmtx">
+        <section class="apply-section">
+            <div class="apply-container animate">
+                <h2>Apply for Your Dream Job</h2>
+                <p>Fill out the form below and we will get back to you soon!</p>
+                <form id="applyForm" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="education">Education Qualification</label>
+                        <input type="text" id="education" name="education" placeholder="Higher Education" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Year of Completion</label>
+                        <input type="text" id="year" name="year" placeholder="Year of Completion" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="position">Position Applied For</label>
+                        <select id="position" name="position" required>
+                            <option value="">Select a position</option>
+                            <option value="developer">Developer</option>
+                            <option value="designer">Designer</option>
+                            <option value="manager">Project Manager</option>
+                            <option value="consultant">Consultant</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Current Employment Status</label>
+                        <select id="status" name="status" required>
+                            <option value="">Select a Status</option>
+                            <option value="employed">Employed</option>
+                            <option value="self-employed">Self-Employed</option>
+                            <option value="unemployed">Unemployed</option>
+                            <option value="student">Student</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Current Address</label>
+                        <input type="text" id="address" name="address" placeholder="Street Address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="resume">Upload Resume</label>
+                        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message / Cover Letter</label>
+                        <textarea id="message" name="message" placeholder="Write something about yourself..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit Application</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="assets/js/apply.js"></script>
+
+
+</body>
+
+</html>

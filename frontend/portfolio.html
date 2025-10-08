@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <!-- Favicons -->
+  <link href="./assets/img/logo/Fevicon.png " rel="icon">
+  <link href="assets/img/logo/Logo_English.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #dff3f5ff;
+      color: #fff;
+    }
+
+
+    .portfolio-hero {
+      background: url('/forentend/assets/img/website/earth.png') no-repeat center center/cover;
+      padding: 100px 50px;
+      color: #fff;
+      margin-bottom: 50px;
+      height: 83vh;
+      display: flex;
+      align-items: end;
+    }
+
+    .portfolio-hero-content .welcome {
+      color: #ffffff;
+      display: block;
+      font-size: 70px;
+      font-weight: bold;
+      margin-bottom: -10px;
+    }
+
+    .portfolio-hero-content h1 {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    /* Portfolio Grid */
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      /* exactly 3 per row */
+      gap: 20px;
+      padding: 0 50px 50px;
+    }
+
+
+    .project-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      cursor: pointer;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Project Image */
+    .project-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+      border-radius: 12px;
+    }
+
+    /* Zoom on hover */
+    .project-card:hover img {
+      transform: scale(1.1);
+    }
+
+    /* Overlay for details */
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 37, 64, 0.85);
+      /* corporate navy */
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      text-align: center;
+      padding: 20px;
+      transform: translateY(20px);
+    }
+
+    /* Show details on hover */
+    .project-card:hover .overlay {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Overlay Text */
+    .overlay h3 {
+      margin: 5px 0;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .overlay p {
+      font-size: 13px;
+      color: #e2e8f0;
+      margin-top: 5px;
+    }
+
+
+
+    /* Pagination */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin: 40px 0;
+      gap: 15px;
+    }
+
+    .pagination button {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: 1px solid rgba(40, 39, 39, 0.3);
+      background: transparent;
+      color: #111010ff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .pagination button.active {
+      background: #35e7e7ff;
+      color: #111;
+    }
+
+    .pagination button:hover {
+      border-color: #fff;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header id="header" class="header sticky-top">
+
+    <div class="topbar d-flex align-items-center dark-background">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a
+              href="mailto:info@kavyainfoweb.com">info@kavyainfoweb.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><a href="tel:8600346599">+91 8600346599</a></i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="" class="twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://www.facebook.com/share/16zpKgntEt/?mibextid=wwXIfr" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/kavyainfowebpvtltd?igsh=MTdmN3l4MHRmdTVrMg==" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/kavyainfoweb/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/logo/Logo_English.png" alt="">
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li class="dropdown"><a href=""><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="case_studies.html">Case Studies</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a href="#"><span>Services</span> <i
+                  class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="Saas CRM & ERP.html">SaaS CRM & ERP</a></li>
+                <!-- <li><a href="#">Software Development</a></li> -->
+                <li><a href="DataAnalyticsindex .html">Data Analytics Solutions</a></li>
+                <li><a href="PerformanceMarketing.html">Performance Marketing</a></li>
+                <li class="dropdown"><a href="#"><span>Developement</span> <i
+                      class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="SoftwareDevelopmentServices.html">Software Development</a></li>
+                    <li><a href="WebDevelopment.html">Web Development</a></li>
+                    <li><a href="UI-UXServices.html">UI-UX Development</a></li>
+                    <li><a href="FlutterFlow.html">Flutter Development</a></li>
+                    <li><a href="BusinessDevelopment.html">Business Developement</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown"><a href="#"><span>Career</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="Whyjoinus.html">Why Join Us</a></li>
+                <li><a href="CurrentOpenings.html">Job Openings</a></li>
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <section class="portfolio-hero">
+    <div class="portfolio-hero-content">
+      <span class="welcome" data-aos="fade-up" data-aos-delay="250">PORTFOLIO</span>
+      <h1 data-aos="fade-up" data-aos-delay="350">Our Selected Works</h1>
+
+    </div>
+  </section>
+
+
+
+
+  <div class="portfolio" id="portfolio" data-aos="fade-down" data-aos-delay="250"></div>
+
+
+  <div class="pagination" id="pagination" data-aos="fade-right" data-aos-delay="350"></div>
+
+
+  <footer id="footer" class="footer light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html"><img src="assets/img/logo/Logo_English.png" alt="KavyaInfoweb Logo"
+              style="width: 130px;"></a>
+          <div class="footer-contact pt-3">
+            <p>Office No 54, Manorama Apartment,</p>
+            <p>near Bharat Petroleum, Kukde Layout,</p>
+            <p>Rameshwari, Nagpur, Maharashtra 440027</p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="AboutUs.html">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="Saas CRM & ERP.html">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="CurrentOpenings.html">Career</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="Saas CRM & ERP.html">SaaS CRM & ERP</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="SoftwareDevelopmentServices.html">Software Development</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="DataAnalyticsindex .html">Data Analytics Solutions</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="PerformanceMarketing.html">Performance Marketing</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12 foot-contact">
+          <h4>Follow Us</h4>
+          <div class="social-links d-flex">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/share/16zpKgntEt/?mibextid=wwXIfr" class="facebook"><i
+              class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/kavyainfowebpvtltd?igsh=MTdmN3l4MHRmdTVrMg==" class="instagram"><i
+              class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/kavyainfoweb/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+          <p class="mt-3"><strong>Phone:</strong> <span><a href="tel:8600346599" style="font-size: 14px">+91
+                8600346599</a></span></p>
+          <p><strong>Email:</strong> <span><a href="mailto:info@kavyainfoweb.com"
+                style="font-size: 14px">info@kavyainfoweb.com</a></p>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">KavyaInfoweb</strong> <span>All Rights
+          Reserved</span>
+      </p>
+    </div>
+
+  </footer>
+
+
+
+  <script>
+    // Sample Projects Data
+    const projects = [
+      { title: "Project 1", category: "Ecommerce", desc: "A modern website design.", img: "assets/img/portfolio/p1.png", link: "https://gtlngp.com/" },
+      { title: "Project 2", category: "Website", desc: "Hair Patch Services", img: "assets/img/portfolio/p2.png", link: "https://glowlookshairsolutions.in/" },
+      { title: "Project 3", category: "Taxation & Accounting", desc: "Alcon Academy Of Account", img: "assets/img/portfolio/p18.png", link: "https://aaatindia.in/" },
+      { title: "Project 4", category: "Website", desc: "Hair Transplant Services", img: "assets/img/portfolio/p3.png", link: "https://saundaryacity.com/" },
+      { title: "Project 5", category: "Website", desc: "Interior Designs Services", img: "assets/img/portfolio/p4.png", link: "https://shivayinteriors.com/" },
+      { title: "Project 6", category: "Website", desc: "Pandit in Trimbakeshwar", img: "assets/img/portfolio/p20.png", link: "https://panditakhileshguruji.in/" },
+      { title: "Project 7", category: "Website", desc: "Dr. Avinash Funde", img: "assets/img/portfolio/p5.png", link: "https://drfundeultimatehealth.com/" },
+      { title: "Project 8", category: "Website", desc: "Catering & Decoration", img: "assets/img/portfolio/p22.png", link: "https://skyeventsdecor.com/" },
+      { title: "Project 9", category: "Website", desc: "Rankers Academy", img: "assets/img/portfolio/p9.png", link: "https://therankersacademy.com/" },
+      { title: "Project 10", category: "Website", desc: "Aditi Beauty School", img: "assets/img/portfolio/p19.png", link: "https://aditibeautyschool.com/" },
+      { title: "Project 11", category: "Website", desc: "Uktha The Designer Store", img: "assets/img/portfolio/p10.png", link: "https://ukthaa.com/" },
+      { title: "Project 12", category: "Website", desc: "Digital Marketing Courses", img: "assets/img/portfolio/p11.png", link: "https://weblyticsindia.in/" },
+      { title: "Project 13", category: "Website", desc: "Hair Patch Solutions", img: "assets/img/portfolio/p12.png", link: "https://dreamhairsolution.in/" },
+      { title: "Project 14", category: "Website", desc: "Fashion & Jewellery", img: "assets/img/portfolio/p13.png", link: "https://flyb.co.in/" },
+      { title: "Project 15", category: "Website", desc: "Solar Water Heater", img: "assets/img/portfolio/p14.png", link: "https://kisansolarwaterheater.com/" },
+      { title: "Project 16", category: "Website", desc: "SP Solar Water Heater", img: "assets/img/portfolio/p15.png", link: "https://spsolarwaterheater.com/" },
+      { title: "Project 17", category: "Website", desc: "Harishchandra Medicity", img: "assets/img/portfolio/p16.png", link: "https://harishchandramedicity.com/" },
+      { title: "Project 18", category: "Website", desc: "Khidmat Tours & Travels", img: "assets/img/portfolio/p17.png", link: "https://khidmattoursandtravels.com/" }
+    ];
+
+
+    const perPage = 6;
+    let currentPage = 1;
+    const portfolio = document.getElementById("portfolio");
+    const pagination = document.getElementById("pagination");
+
+    function renderProjects(page) {
+      portfolio.innerHTML = "";
+      const start = (page - 1) * perPage;
+      const end = start + perPage;
+      const current = projects.slice(start, end);
+
+      current.forEach(p => {
+        const link = document.createElement("a");
+        link.className = "project-card";
+        link.href = p.link;         // Makes the card clickable
+        link.target = "_blank";     // Opens in a new tab (optional)
+        link.innerHTML = `
+  <img src="${p.img}" alt="${p.title}">
+  <div class="overlay">
+    <h3>${p.title}</h3>
+    <p>${p.category}</p>
+    <p>${p.desc}</p>
+  </div>
+`;
+        portfolio.appendChild(link);
+      });
+    }
+
+    function renderPagination() {
+      pagination.innerHTML = "";
+      const totalPages = Math.ceil(projects.length / perPage);
+
+      // Prev button
+      const prev = document.createElement("button");
+      prev.textContent = "‹";
+      prev.disabled = currentPage === 1;
+      prev.addEventListener("click", () => {
+        if (currentPage > 1) {
+          currentPage--;
+          renderProjects(currentPage);
+          renderPagination();
+        }
+      });
+      pagination.appendChild(prev);
+
+      // Page numbers
+      for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement("button");
+        btn.textContent = i;
+        if (i === currentPage) btn.classList.add("active");
+        btn.addEventListener("click", () => {
+          currentPage = i;
+          renderProjects(currentPage);
+          renderPagination();
+        });
+        pagination.appendChild(btn);
+      }
+
+      // Next button
+      const next = document.createElement("button");
+      next.textContent = "›";
+      next.disabled = currentPage === totalPages;
+      next.addEventListener("click", () => {
+        if (currentPage < totalPages) {
+          currentPage++;
+          renderProjects(currentPage);
+          renderPagination();
+        }
+      });
+      pagination.appendChild(next);
+    }
+
+    renderProjects(currentPage);
+    renderPagination();
+  </script>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="/forentend/assets/js/main.js"></script>
+
+</body>
+
+</html>
