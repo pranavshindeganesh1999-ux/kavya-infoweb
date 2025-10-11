@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // ===== Serve frontend =====
-app.use(express.static(path.join(__dirname, 'forentend')));
+app.use(express.static(path.join(__dirname, 'frontend')));
 
 // ===== File Upload Setup =====
 const uploadDir = path.join(__dirname, 'uploads');
@@ -27,6 +27,10 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 // CONTACT FORM HANDLER
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'frontend', 'index.html'));
+});
+
 app.post('/api/contact', (req, res) => {
   const { name, email, phone, subject, message } = req.body;
 
@@ -130,6 +134,11 @@ app.post('/api/apply', upload.single('resume'), (req, res) => {
     res.status(500).json({ success: false, message: 'Internal server error (apply)' });
   }
 });
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
+});
+
 app.listen(PORT, () => {
   console.log(`✅ Server running at http://localhost:${PORT}`);
 });
@@ -212,3 +221,4 @@ app.listen(PORT, () => {
 // app.listen(PORT, () => {
 //   console.log(`Server running at http://localhost:${PORT}`);
 // });
+
