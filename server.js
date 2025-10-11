@@ -26,11 +26,6 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
-// CONTACT FORM HANDLER
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'frontend', 'index.html'));
-});
-
 app.post('/api/contact', (req, res) => {
   const { name, email, phone, subject, message } = req.body;
 
@@ -136,7 +131,7 @@ app.post('/api/apply', upload.single('resume'), (req, res) => {
 });
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'frontend', 'index.html'));
 });
 
 app.listen(PORT, () => {
@@ -221,4 +216,5 @@ app.listen(PORT, () => {
 // app.listen(PORT, () => {
 //   console.log(`Server running at http://localhost:${PORT}`);
 // });
+
 
