@@ -130,7 +130,7 @@ app.post('/api/apply', upload.single('resume'), (req, res) => {
   }
 });
 
-app.get('/*', (req, res) => {
+app.use((req, res, next) => {
   res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
 });
 
@@ -217,5 +217,6 @@ app.listen(PORT, () => {
 // app.listen(PORT, () => {
 //   console.log(`Server running at http://localhost:${PORT}`);
 // });
+
 
 
