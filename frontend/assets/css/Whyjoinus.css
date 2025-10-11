@@ -1,0 +1,439 @@
+/* ===========================
+   GLOBAL RESET & BASE STYLES
+=========================== */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f9fafc;
+  color: #333;
+}
+
+/* ===========================
+   BACKGROUND TEXT
+=========================== */
+.background-text {
+  font-size: 140px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.03);
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  z-index: 0;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+.services-hero {
+  height: 83vh;
+  background: url('/forentend/assets/img/images/first\ page.jpg') no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 0 5% 20px;
+}
+
+.services-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.services-hero-content {
+  position: relative;
+  max-width: 700px;
+  z-index: 1;
+  margin: 50px 0 30px;
+}
+
+.services-hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.services-hero-content h1 .gradient-bg {
+  background: linear-gradient(90deg, #b37cc4 0%, #eb90b2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+
+.services-hero-content p.subtitle {
+  font-size: 1rem;
+  margin-top: 5px;
+  color: #000;
+}
+
+/* Button */
+.tt_button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  padding: 8px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  background: #08244c;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tt_button:hover {
+  background: #0a356b;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.tt_button .arrow {
+  font-size: 20px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.tt_button:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* ===========================
+   VALUES SECTION
+=========================== */
+.values {
+  padding: 80px 40px;
+  background: #fff;
+  text-align: center;
+}
+
+.gradient-bg {
+  background: linear-gradient(132deg, #9a50db 0, #ff8255 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  padding: 25px;
+  cursor: pointer;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #5211C9, #44D3DB);
+  opacity: 0;
+  /* border-radius: 15px; */
+  transition: opacity 0.4s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card img {
+  width: 80px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.card h3,
+.card p {
+  position: relative;
+  z-index: 1;
+  color: #1E1F4A;
+  transition: color 0.3s ease;
+}
+
+.card:hover h3,
+.card:hover p {
+  color: #fff;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* ===========================
+   BENEFITS SECTION
+=========================== */
+.our-benefits {
+  padding: 80px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.our-benefits h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.our-benefits h2 span {
+  background: linear-gradient(90deg, purple, orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.our-benefits .subtitle {
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.benefit img {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.benefit h3 {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.benefit p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* ===========================
+   PROCESS SECTION
+=========================== */
+.header-section {
+  width: 100%;
+  /* min-height: 100vh; */
+  background: url('/forentend/assets/img/images/MicrosoftTeams-image-45.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 40px;
+  text-align: center;
+}
+
+.header-section h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: black;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.header-section img {
+  max-width: 90%;
+  height: auto;
+}
+
+/* ===========================
+   COLORED TEXT UTILITIES
+=========================== */
+.purple-text {
+  color: #9062c9;
+  font-weight: 900;
+}
+
+.orange-text {
+  color: #f37869;
+  font-weight: 900;
+}
+
+/* ===========================
+   CTA SECTION
+=========================== */
+.cta {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #c0c0c1, #e0e2e3);
+  color: #fff;
+}
+
+.cta h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  margin-bottom: 30px;
+}
+
+.btn {
+  background: #fff;
+  color: #cdd0d3;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background: #0056b3;
+  color: #fff;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* ===========================
+   SCROLL REVEAL ANIMATIONS
+=========================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===========================
+   STATS SECTION
+=========================== */
+.stats-section {
+  padding: 80px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.stat {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.stat::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(#a18cd1, #fbc2eb, #a18cd1);
+  animation: rotate 6s linear infinite;
+  top: -20%;
+  left: -20%;
+}
+
+.stat::after {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 1;
+}
+
+.stat-content {
+  position: relative;
+  z-index: 2;
+  font-size: 14px;
+}
+
+.stat-content span {
+  display: block;
+  font-size: 28px;
+  margin-bottom: 8px;
+  color: #7b3fa0;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+@media (max-width: 768px) {
+
+  .hero h1,
+  .header-section h1 {
+    font-size: 32px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .stats-container {
+    gap: 20px;
+  }
+
+  .stat {
+    width: 140px;
+    height: 140px;
+  }
+
+  .stat-content span {
+    font-size: 24px;
+  }
+
+  .stat-content p {
+    font-size: 12px;
+  }
+}

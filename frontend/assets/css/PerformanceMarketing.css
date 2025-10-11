@@ -1,0 +1,460 @@
+/* -------------------------------
+   Global Styles
+--------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* -------------------------------
+   Hero Section
+--------------------------------*/
+.services-hero {
+    position: relative;
+    height: 40vh;
+    background: url("/forentend/assets/img/website/performance\ marketing.png") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.services-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.services-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 20px;
+}
+
+.services-hero-content p {
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+.background-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10rem;
+    font-weight: 800;
+    color: rgba(75, 73, 73, 0);
+    z-index: 1;
+    white-space: nowrap;
+    user-select: none;
+}
+
+/* Hero Section */
+.services-hero {
+    position: relative;
+    height: 83vh;
+    display: flex;
+    align-items: flex-end;
+    /* Align content at bottom */
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    padding-bottom: 30px;
+    /* Adjust distance from bottom */
+}
+
+/* Hero Section Heading */
+.services-hero-content h1 {
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #f5f4f1;
+    /* Change color as needed */
+    margin: 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Optional hover effect */
+.services-hero-content h1:hover {
+    color: #fc9154;
+    /* lighter red on hover */
+    transform: scale(1.05);
+}
+
+
+
+
+/* -------------------------------
+   Performance Marketing Sections
+--------------------------------*/
+.pm-section {
+    position: relative;
+    padding: 100px 8%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pm-section.alt-bg {
+    background: #0a0a0a;
+}
+
+/* Dark gradient overlay */
+.pm-overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.4));
+    z-index: 0;
+}
+
+.alt-bg .pm-overlay {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.4));
+}
+
+.pm-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1300px;
+    flex-wrap: wrap;
+}
+
+.pm-content.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Text Content - Bottom Left Alignment */
+.pm-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.pm-text {
+    position: absolute;
+    bottom: 40px;
+    /* distance from bottom */
+    left: 60px;
+    /* distance from left edge */
+    max-width: 600px;
+    z-index: 2;
+    color: #fff;
+}
+
+.pm-text h2 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.pm-text p,
+.pm-text ul {
+    color: #ddd;
+}
+
+/* optional: dark overlay behind text for readability */
+.pm-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+.pm-text ul {
+    list-style: none;
+}
+
+.pm-text ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+    font-size: 1rem;
+}
+
+.pm-text ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #2cd8aae1;
+}
+
+/* Image Content */
+.pm-image {
+    flex: 1 1 500px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.pm-image img {
+    width: 100%;
+    max-width: 550px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(3, 140, 106, 0.719);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.pm-image img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 40px rgba(3, 140, 106, 0.719);
+}
+
+/* -------------------------------
+   Responsive Design
+--------------------------------*/
+@media (max-width: 992px) {
+    .pm-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pm-content.reverse {
+        flex-direction: column;
+    }
+
+    .pm-text h2 {
+        font-size: 2rem;
+    }
+
+    .pm-text p {
+        font-size: 1rem;
+    }
+
+    .pm-image img {
+        max-width: 100%;
+    }
+
+    .services-hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .background-text {
+        font-size: 6rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .pm-section {
+        padding: 70px 5%;
+    }
+
+    .pm-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .services-hero {
+        height: 80vh;
+    }
+
+    .background-text {
+        font-size: 4rem;
+    }
+
+    .services-request-call a {
+        padding: 12px 28px;
+    }
+}
+
+/* -------------------------------
+   AOS Animations + Smooth Zoom
+--------------------------------*/
+[data-aos] {
+    transition-property: transform, opacity;
+}
+
+.pm-image img {
+    transform: scale(0.95);
+    opacity: 0;
+}
+
+[data-aos].aos-animate img {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Optional subtle floating effect for hero */
+.services-hero-content {
+    animation: floatUp 1.2s ease-out;
+}
+
+@keyframes floatUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Common styling for all text sections */
+.pmcontainer .ptext-section,
+.pmcontainer1 .ptext-section1,
+.pmcontainer2 .ptext-section2,
+.pmcontainer3 .ptext-section3,
+.pmcontainer4 .ptext-section4,
+.pmcontainer5 .ptext-section5 {
+    background: linear-gradient(135deg, rgba(255, 0, 76, 0.1), rgba(255, 0, 76, 0.05));
+    padding: 40px 30px;
+    margin: 40px auto;
+    border-radius: 20px;
+    max-width: 900px;
+    color: #fff;
+    line-height: 1.6;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(3, 140, 106, 0.719);
+}
+
+/* Hover effect for gradient animation */
+.pmcontainer .ptext-section:hover,
+.pmcontainer1 .ptext-section1:hover,
+.pmcontainer2 .ptext-section2:hover,
+.pmcontainer3 .ptext-section3:hover,
+.pmcontainer4 .ptext-section4:hover,
+.pmcontainer5 .ptext-section5:hover {
+    background: linear-gradient(135deg, rgba(3, 172, 146, 0.473), rgba(230, 74, 121, 0.1));
+    transform: translateY(-5px);
+}
+
+/* Headings */
+.pmcontainer .ptext-section h1,
+.pmcontainer1 .ptext-section1 h1,
+.pmcontainer2 .ptext-section2 h1,
+.pmcontainer3 .ptext-section3 h1,
+.pmcontainer4 .ptext-section4 h1,
+.pmcontainer5 .ptext-section5 h1 {
+    color: #f38231;
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+/* Subheadings */
+.pmcontainer .ptext-section h3,
+.pmcontainer1 .ptext-section1 h3,
+.pmcontainer2 .ptext-section2 h3,
+.pmcontainer3 .ptext-section3 h3,
+.pmcontainer4 .ptext-section4 h3,
+.pmcontainer5 .ptext-section5 h3 {
+    color: #f59a62;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+/* Paragraphs */
+.pmcontainer .ptext-section p,
+.pmcontainer1 .ptext-section1 p,
+.pmcontainer2 .ptext-section2 p,
+.pmcontainer3 .ptext-section3 p,
+.pmcontainer4 .ptext-section4 p,
+.pmcontainer5 .ptext-section5 p {
+    color: #050000;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Animation using AOS */
+[data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+}
+
+[data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+
+    .pmcontainer .ptext-section,
+    .pmcontainer1 .ptext-section1,
+    .pmcontainer2 .ptext-section2,
+    .pmcontainer3 .ptext-section3,
+    .pmcontainer4 .ptext-section4,
+    .pmcontainer5 .ptext-section5 {
+        padding: 30px 20px;
+        margin: 30px auto;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Request Call Button - Centered & Red */
+.services-request-call {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    /* space above and below */
+}
+
+.services-request-call a {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(135deg, #f48224, #f5a564);
+    border-radius: 50px;
+    box-shadow: 0 8px 25px rgba(255, 38, 0, 0.986);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* Hover effect */
+.services-request-call a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(255, 38, 0, 0.986);
+    background: linear-gradient(135deg, #f48224, #f5a564);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .services-request-call a {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,101 @@
+/* HERO SECTION */
+.services-hero {
+    position: relative;
+    background: url('../img/performance-bg.jpg') center center/cover no-repeat;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.services-hero::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right:0; bottom:0;
+    background: rgba(0,0,0,0.5);
+}
+
+.services-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.services-hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease forwards;
+}
+
+.services-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.request-call-btn {
+    background-color: #ff4c60;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.request-call-btn:hover {
+    background-color: #e03b4d;
+    transform: translateY(-3px);
+}
+
+/* SERVICE CARDS */
+.pm-section {
+    padding: 80px 0;
+    background: #f9f9f9;
+}
+
+.service-card {
+    background: #fff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.service-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.service-card ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.service-card ul li {
+    margin-bottom: 10px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInDown {
+    0% {opacity: 0; transform: translateY(-30px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+    0% {opacity: 0; transform: translateY(30px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .services-hero h1 { font-size: 2rem; }
+    .services-hero p { font-size: 1rem; }
+}

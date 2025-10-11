@@ -1,0 +1,348 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background: #000;
+  line-height: 1.5;
+}
+
+/* Hero Section */
+.services-hero {
+  height: 83vh;
+  background: url('/forentend/assets/img/services/software\ dev.png') no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  /* push content to bottom */
+  justify-content: flex-start;
+  /* align content to left */
+  text-align: left;
+  padding: 0 10% 60px 10%;
+  /* left-right + bottom padding */
+}
+
+.services-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 0%;
+  background: rgba(92, 90, 90, 0.6);
+
+}
+
+.services-hero-content {
+  position: relative;
+  max-width: 700px;
+  z-index: 1;
+  margin-bottom: 60px;
+}
+
+.services-hero-content h1 {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.services-hero-content h1 span {
+
+  font-size: 3rem;
+  font-weight: 660;
+
+  color: hsla(0, 0%, 100%, 0.986);
+}
+
+.services-hero-content p {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  color: hsla(0, 0%, 100%, 0.986);
+  /* color: #ddd; */
+}
+
+/* Request For Call */
+.services-request-call {
+  position: fixed;
+  top: 40%;
+  right: -52px;
+  transform: rotate(-90deg);
+  background: #009CA6;
+  padding: 1px 13px;
+  border-radius: 5px 5px 0 0;
+  z-index: 1000;
+}
+
+.services-request-call a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ================= Responsive ================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .services-hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .services-hero-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+  .services-hero {
+    padding: 0 5% 40px 5%;
+    text-align: left;
+    /* still left aligned */
+  }
+
+  .services-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .services-hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .services-request-call {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+}
+
+/* ************************ */
+
+
+/* Next Section */
+.services-design {
+  /* background: url('fd848373-8925-4fb5-9a2c-de5c0bd42f76.png') no-repeat center center/cover; */
+  background-color: #ddd;
+  padding: 80px 15%;
+  text-align: center;
+  color: #333;
+}
+
+.services-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.services-design h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.services-design p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+
+
+/* ================= Responsive ================= */
+@media (max-width: 992px) {
+  .services-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .services-text p {
+    font-size: 1rem;
+  }
+
+  .services-design {
+    padding: 60px 10%;
+  }
+
+  .services-design h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-header {
+    padding: 0 5% 40px 5%;
+  }
+
+  .services-text h1 {
+    font-size: 2rem;
+  }
+
+  .services-text p {
+    font-size: 0.9rem;
+  }
+
+  .services-design {
+    padding: 40px 8%;
+  }
+
+  .services-design h2 {
+    font-size: 1.6rem;
+  }
+
+  .services-design p {
+    font-size: 0.9rem;
+  }
+
+  .services-request-call {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+}
+
+/* ***************************** */
+
+/* Services Container */
+.unic-services-section {
+  padding: 80px 15%;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  background: url('/forentend/assets/img/images/fotis-fotopoulos-6sAl6aQ4OWI-unsplash.jpg') no-repeat right center;
+}
+
+.overlay-service{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #2c2c2cce;
+}
+
+/* Section Heading */
+.unic-services-heading {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.unic-services-heading h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+.unic-services-heading p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+/* Services Flex Layout */
+.unic-services-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
+/* Left Menu */
+.unic-services-menu {
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.unic-services-menu button {
+  background: #e0e0e0;
+  color: #000;
+  border: none;
+  padding: 12px 20px;
+  text-align: left;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.unic-services-menu button.active {
+  background: linear-gradient(90deg, #5febdf, #5c5bff);
+  color: #fff;
+}
+
+.unic-services-menu button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+/* Right Content */
+.unic-services-details {
+  flex: 2 1 500px;
+}
+
+.unic-services-details p {
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.unic-services-details ul {
+  list-style: none;
+}
+
+.unic-services-details ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+  color: #b8b8b8;
+}
+
+.unic-services-details ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(90deg, #5febdf, #5c5bff);
+  border-radius: 50%;
+}
+
+/* Background Design */
+.unic-services-section::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  opacity: 1;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .unic-services-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .unic-services-section::after {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .unic-services-heading h1 {
+    font-size: 2rem;
+  }
+
+  .unic-services-menu button {
+    font-size: 0.9rem;
+  }
+}
+
+/* ************************ */
